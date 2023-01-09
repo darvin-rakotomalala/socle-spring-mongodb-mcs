@@ -1,4 +1,4 @@
-## Projet socle spring data jpa
+## Projet socle Spring Data Mongodb
 Dans ce repo, un projet socle de base Spring Boot Data Mongodb qui vise à respecter les bonnes pratiques de développement Java, Spring Boot et Api Rest (clean architecture, concepts SOLID et Clean Code). C'est un projet réutilisable.
 
 ### Technologies
