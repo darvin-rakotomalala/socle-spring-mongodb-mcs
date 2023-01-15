@@ -55,5 +55,5 @@ Les points de terminaison API REST peuvent effectuer différentes actions. Ces a
 ### Exécuter et tester le projet
 ---
 - Exécuter l'application `mvn spring-boot:run`
-- Importer dans Postman la collection `socle_mongodb.postman_collection.json` pour tester les APIs
+- Importer dans Postman la collection `new-mongodb-mcs.postman_collection.json` pour tester les APIs
 - Vous pouver utiliser aussi l'url du Swagger ou importer l'url Swagger dans Postman

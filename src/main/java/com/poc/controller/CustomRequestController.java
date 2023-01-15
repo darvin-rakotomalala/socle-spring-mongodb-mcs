@@ -1,8 +1,10 @@
 package com.poc.controller;
 
 import com.poc.repository.CustomMongoRepository;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,14 +18,14 @@ public class CustomRequestController {
 
     private final CustomMongoRepository customMongoRepository;
 
-    @ApiOperation(value = "WS used to execute request")
+    @Operation(summary = "WS used to execute request")
     @PostMapping
     public Object executeRequest(
-            @ApiParam(name = "request", value = "{\n" +
+            @Parameter(in = ParameterIn.QUERY, name = "request", schema = @Schema(example = "{\n" +
                     "    \"find\": \"notes\",\n" +
                     "    \"batchSize\": 10,\n" +
                     "    \"filter\": {\"title\": \"Spring Data\"}\n" +
-                    "}", required = true)
+                    "}"))
             @RequestBody String request) {
         return customMongoRepository.executMongoRequest(request);
     }

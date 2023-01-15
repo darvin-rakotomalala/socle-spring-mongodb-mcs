@@ -1,14 +1,16 @@
 package com.poc.exception;
 
+import org.apache.http.HttpStatus;
+
 public enum ErrorsEnum {
 
     /**
      * ERR_MCS_POC
      */
-
-    ERR_MCS_NOTE_TITLE_EMPTY("Error occurred - Note title shouldn't be NULL or EMPTY"),
-    ERR_MCS_NOTE_OBJECT_EMPTY("Error occurred - object Note shouldn't be NULL or EMPTY"),
-    ERR_MCS_NOTE_NOT_FOUND("Error occurred - no Note found with this id");
+    ERR_READ_WRITE_CONFIG("Error occurred with the config file READ WRITE option"),
+    ERR_MCS_TUTORIAL_TITLE_EMPTY("Error occurred - Tutorial title shouldn't be NULL or EMPTY"),
+    ERR_MCS_TUTORIAL_OBJECT_EMPTY("Error occurred - object Tutorial shouldn't be NULL or EMPTY"),
+    ERR_MCS_TUTORIAL_NOT_FOUND("Error occurred - no Tutorial found with this id");
 
     private final String errorMessage;
 
