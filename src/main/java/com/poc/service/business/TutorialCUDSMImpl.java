@@ -23,7 +23,7 @@ public class TutorialCUDSMImpl implements TutorialCUDSM {
             log.info("----- createOrUpdateTutorial");
             return tutorialRepository.save(tutorial);
         } catch (Exception e) {
-            log.error("Error createOrUpdateTutorial : {} : {}", e.getMessage(), e);
+            log.error("Error createOrUpdateTutorial : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -34,7 +34,7 @@ public class TutorialCUDSMImpl implements TutorialCUDSM {
             log.info("----- saveAllTutorials");
             return tutorialRepository.saveAll(tutorials);
         } catch (Exception e) {
-            log.error("Error saveAllTutorials : {} : {}", e.getMessage(), e);
+            log.error("Error saveAllTutorials : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -46,7 +46,7 @@ public class TutorialCUDSMImpl implements TutorialCUDSM {
             Tutorial tutorialFound = tutorialRSM.getTutorialById(id);
             tutorialRepository.deleteById(tutorialFound.getId());
         } catch (Exception e) {
-            log.error("Error deleteTutorialById : {} : {}", e.getMessage(), e);
+            log.error("Error deleteTutorialById : {} {}", e.getMessage(), e);
             throw e;
         }
     }
